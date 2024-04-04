@@ -1,14 +1,4 @@
-import { useTranslation } from 'next-i18next'
-import React, { useContext } from 'react'
 
-export const AppContext = React.createContext()
-
-import { colors, fontSizes, fonts } from './constants'
-
-export const AppProvider = ({ children }) => {
-  const { i18n } = useTranslation('common')
-
-  const changeLanguage = () => {
     console.log(i18n.language === 'en')
     if (i18n.language === 'en') {
       i18n.changeLanguage('tr')
